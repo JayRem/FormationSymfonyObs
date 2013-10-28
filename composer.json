@@ -12,6 +12,7 @@
 		"symfony/swiftmailer-bundle" : "2.3.*",
 		"doctrine/orm" : ">=2.2.3,<2.4-dev",
 		"sensio/generator-bundle" : "2.3.*",
+		"gregwar/captcha-bundle" : "master-dev",
 		"symfony/assetic-bundle" : "2.3.*",
 		"symfony/monolog-bundle" : "2.3.*",
 		"sensio/framework-extra-bundle" : "2.3.*",
