@@ -1,0 +1,4 @@
+obs_formation:
+    resource: "@ObsFormationBundle/Resources/config/routing.yml"
+    prefix:   /
+

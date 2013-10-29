@@ -1,0 +1,7 @@
+parameters:
+#    obs_formation.example.class: Obs\FormationBundle\Example
+
+services:
+#    obs_formation.example:
+#        class: %obs_formation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
