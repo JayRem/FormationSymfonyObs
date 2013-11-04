@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<p>
+		Êtes-vous sûr de vouloir supprimer l'article {{ article }} ?
+		<form method="post">
+			<input type="submit" value="Accepter"/>
+		</form>
+	</p>
+{% endblock %}

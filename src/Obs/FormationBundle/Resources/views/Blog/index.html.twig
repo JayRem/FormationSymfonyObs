@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+
+{% block body %}
+	{% for article in articles %}
+		<div class="article" style="border: 1px solid #000; margin: 10px;">
+			<h1><a href="{{ path("obs_formation_blog_voir", { slug: article.slug } ) }}">{{ article.titre }}</a></h1>
+			<p>posté le {{ article.datePost | date() }}
+			<div class="message">
+				{{ article.message | nl2br }}
+			</div>
+			<hr>
+			<div class="commentaires">
+				Il y a {{ article.commentaires | length }} commentaires
+			</div>
+		</div>
+	{% endfor %}
+	<div class="pagination">
+		{% if page != 1 %}
+			<a href="{{ path("obs_formation_blog_homepage") }}">&lt;&lt;</a>
+			<a href="{{ path("obs_formation_blog_homepage", { page : page - 1 }) }}">&lt;</a>
+		{% endif %}
+		page {{ page }} / {{ nb_pages }}
+		{% if page != nb_pages %}
+			<a href="{{ path("obs_formation_blog_homepage", { page : page + 1 }) }}">&gt;</a>
+			<a href="{{ path("obs_formation_blog_homepage", { page : nb_pages }) }}">&gt;&gt;</a>
+		{% endif %}
+	</div>
+	<a href="{{ path("obs_formation_blog_ecrire") }}">Ajouter article</a>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<ul>
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<li class="flash-notice" style="color: #00FF00;">
+			{{ flashMessage }}
+		</li> 
+	{% endfor %}
+	</ul>
+	<div id="article" style="border: 1px solid #000; margin: 10px;">
+		<h1><a href="{{ path("obs_formation_blog_voir", { slug: article.slug } ) }}">{{ article.titre }}</a></h1>
+		<p>posté le {{ article.datePost | date() }}
+		<div class="message">
+			{{ article.message | nl2br }}
+		</div>
+		<hr>
+	</div>
+	
+	<a href="{{ path("obs_formation_blog_modifier", { id : article.id }) }}">Modifier l'article</a><br>
+	<a href="{{ path("obs_formation_blog_supprimer", { id : article.id }) }}">Supprimer l'article</a><br>
+
+	{{ form(form) }}	
+	<div class="commentaires">
+		{% for commentaire in article.commentaires %}
+			<h2>{{ commentaire.auteur }} a écrit le {{ commentaire.datePost | date() }}:</h2>
+			<div class="message-commentaire">
+				{{ commentaire.message | nl2br }}
+			</div>
+		{% endfor %}
+	</div>
+	
+	<a href="{{ path("obs_formation_blog_homepage") }}">Revenir à la liste des articles</a>
+{% endblock %}

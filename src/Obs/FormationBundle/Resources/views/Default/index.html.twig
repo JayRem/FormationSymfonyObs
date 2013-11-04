@@ -1,6 +1,29 @@
-<html>
-<head></head>
-<body>	
-	Hello {{ name }}!
-</body>
-</html>
+{# extends NomDuBundle:NomDeDossierDeViews:nomdufichier.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block title %}
+	{{ parent() }} - page d'accueil
+{% endblock %}
+
+
+{% block body %}
+	<h1>page {{ page }}</h1>
+	{# Ceci est un commentaire #}
+	{{ dump(tableau) }}
+	
+	{% for tab in tableau %}
+		{{ tab }}
+		{% if loop.index0 == 1 %}
+			<p>L'index est 1</p>
+		{% else %}
+			<p>L'index n'est pas 1</p>
+		{% endif %}
+	{% endfor %}
+	
+	{{ date | date() }}
+	
+	{% include 'ObsFormationBundle:Default:toto.html.twig' %}
+	
+	{% render(controller("ObsFormationBundle:Default:hello")) %}
+	
+{% endblock %}

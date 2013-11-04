@@ -7,7 +7,9 @@
 	<buildpathentry kind="src" path="vendor/gregwar/captcha-bundle"/>
 	<buildpathentry kind="src" path="vendor/sensio/framework-extra-bundle"/>
 	<buildpathentry kind="src" path="vendor/doctrine/doctrine-bundle"/>
+	<buildpathentry kind="src" path="vendor/gedmo/doctrine-extensions/lib"/>
 	<buildpathentry kind="src" path="vendor/doctrine/collections/lib"/>
+	<buildpathentry kind="src" path="vendor/stof/doctrine-extensions-bundle"/>
 	<buildpathentry kind="src" path="vendor/doctrine/orm/lib"/>
 	<buildpathentry kind="src" path="vendor/jdorn/sql-formatter/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/icu"/>
@@ -22,7 +24,7 @@
 	<buildpathentry kind="src" path="vendor/swiftmailer/swiftmailer/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/swiftmailer-bundle"/>
 	<buildpathentry kind="src" path="vendor/gregwar/captcha"/>
-	<buildpathentry excluding="vendor/twig/extensions/lib/|src/|vendor/sensio/distribution-bundle/|vendor/doctrine/inflector/lib/|vendor/gregwar/captcha-bundle/|vendor/sensio/framework-extra-bundle/|vendor/doctrine/doctrine-bundle/|vendor/doctrine/collections/lib/|vendor/doctrine/orm/lib/|vendor/jdorn/sql-formatter/lib/|vendor/symfony/icu/|vendor/doctrine/annotations/lib/|vendor/doctrine/common/lib/|vendor/monolog/monolog/src/|vendor/doctrine/cache/lib/|vendor/composer/|vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/|vendor/symfony/symfony/src/|vendor/kriswallsmith/assetic/src/|vendor/swiftmailer/swiftmailer/lib/|vendor/symfony/swiftmailer-bundle/|vendor/gregwar/captcha/|vendor/symfony/assetic-bundle/|vendor/symfony/monolog-bundle/|vendor/sensio/generator-bundle/|vendor/psr/log/|vendor/doctrine/lexer/lib/|vendor/twig/twig/lib/|vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Resources/stubs/|vendor/doctrine/dbal/lib/|vendor/incenteev/composer-parameter-handler/" kind="src" path=""/>
+	<buildpathentry kind="src" path="vendor/doctrine/data-fixtures/lib"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 	<buildpathentry kind="src" path="vendor/symfony/assetic-bundle"/>
 	<buildpathentry kind="src" path="vendor/symfony/monolog-bundle"/>
@@ -32,5 +34,6 @@
 	<buildpathentry kind="src" path="vendor/twig/twig/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Resources/stubs"/>
 	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib"/>
+	<buildpathentry kind="src" path="vendor/doctrine/doctrine-fixtures-bundle"/>
 	<buildpathentry kind="src" path="vendor/incenteev/composer-parameter-handler"/>
 </buildpath>

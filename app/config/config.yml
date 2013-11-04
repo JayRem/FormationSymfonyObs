@@ -67,3 +67,10 @@ swiftmailer:
 
 # configuration Captcha
 gregwar_captcha: ~
+
+# configuration des extensions doctrine
+stof_doctrine_extensions:
+    default_locale: fr
+    orm:
+        default:
+            sluggable: true

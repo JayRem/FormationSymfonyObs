@@ -1,3 +1,29 @@
+obs_formation_blog_voir:
+    pattern: /blog/article/{slug}
+    defaults: { _controller: ObsFormationBundle:Blog:voirArticle }
+        
+obs_formation_blog_ecrire:
+    pattern: /blog/ajouter
+    defaults: { _controller: ObsFormationBundle:Blog:ecrireArticle }
+    
+obs_formation_blog_modifier:
+    pattern: /blog/modifier/{id}
+    defaults: { _controller: ObsFormationBundle:Blog:modifierArticle }
+    requirements:
+        id: \d+
+    
+obs_formation_blog_supprimer:
+    pattern: /blog/supprimer/{id}
+    defaults: { _controller: ObsFormationBundle:Blog:supprimerArticle }
+    requirements:
+        id: \d+
+
+obs_formation_blog_homepage:
+    pattern: /blog/{page}
+    defaults: { _controller: ObsFormationBundle:Blog:index, page: 1 }
+    requirements:
+        page: \d+
+
 obs_formation_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: ObsFormationBundle:Default:index }
+    pattern:  /{page}
+    defaults: { _controller: ObsFormationBundle:Default:index, page: 1 }    

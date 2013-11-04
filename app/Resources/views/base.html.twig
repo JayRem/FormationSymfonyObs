@@ -3,10 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        	<link rel="stylesheet" href="{{ asset("css/styles.css") }}" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    	{# header>ul>.menu*6>a[href=#]{lien $} #}
+    	<header>
+    		<ul>
+    			<li class="menu"><a href="{{ path("obs_formation_homepage") }}">Accueil</a></li>
+    			<li class="menu"><a href="{{ path("obs_formation_blog_homepage") }}">Blog</a></li>
+    			<li class="menu"><a href="{{ path("obs_formation_blog_ecrire") }}">Ecrire un article</a></li>
+    			<li class="menu"><a href="#">lien 4</a></li>
+    			<li class="menu"><a href="#">lien 5</a></li>
+    			<li class="menu"><a href="#">lien 6</a></li>
+    		</ul>
+    	</header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
